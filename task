@@ -1,0 +1,10 @@
+from typing import Optional, List
+def to_sum(nums: List[int], turget:int) -> Optional[List[int]]:
+    res = {} # для числа и его индекса
+    for i, x in enumerate(nums):  # идем по массиву и сохраняем в res индексы чисел
+        need = turget - x #проверяю  для каждого нового числа x был ли его партнер раньше target - x
+        if need in res: #запись после проверки гарантирует не использовать элемент дважды
+            return [res[need], i] #если да то возвращаю сразу пару индексов чисел
+        res[x] = i #если нет то заношу x в res и иду дальше
+    return None
+print(to_sum([3, 3], 6))
