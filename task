@@ -75,7 +75,7 @@ class TestToSum(unittest.TestCase):
         self.assertEqual(pair, [1, 2])
 
     def test_long_list_tail_pair(self):
-        #Пара находится в самом конце - проверяем, что алгоритм O(n) корректно её находит
+        #Пара находится в самом конце - проверяем, что алгоритм корректно её находит
         nums = list(range(10000))
         target = 19997
         self.assertEqual(to_sum(nums, target), [9998, 9999])
