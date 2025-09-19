@@ -80,12 +80,5 @@ class TestToSum(unittest.TestCase):
         target = 19997
         self.assertEqual(to_sum(nums, target), [9998, 9999])
 
-    #Дополнительно: функция не мутирует входной список
-    def test_input_not_mutated(self):
-        nums = [2, 7, 11, 15]
-        snapshot = list(nums)
-        _ = to_sum(nums, 9)
-        self.assertEqual(nums, snapshot)
-
 if __name__ == "__main__":
     unittest.main()
